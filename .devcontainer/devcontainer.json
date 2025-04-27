@@ -1,0 +1,24 @@
+{
+  "name": "Python + MySQL",
+  "image": "mcr.microsoft.com/devcontainers/python:3.11",
+  "forwardPorts": [
+    3306,
+    8000
+  ],
+  "features": {
+    "docker-in-docker": "latest"
+  },
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "editor.formatOnSave": true
+      },
+      "extensions": [
+        "ms-python.python",
+        "dbaeumer.vscode-eslint",
+        "ms-vscode.live-server"
+      ]
+    }
+  },
+  "postCreateCommand": "pip install mysql-connector-python flask flask-cors requests"
+}
